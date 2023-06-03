@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+body::-webkit-scrollbar {
+    width: 5px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: rgba(40, 40, 40, 1);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: limegreen;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /*position: relative;*/
+    scroll-behavior: smooth;
+}
+.aboutUs{
+    align-items: center;
+    padding: 50px;
+    font-size: 20px;
+    margin-left:-350px; /* половина размера формы*/
+    margin-top:-350px;
+    /*background: rgba(40, 40, 40, 1);*/
+    width: 700px;
+    height: 700px;
+    /*font-size: 90px;*/
+}
+.content{
+    margin-top: 130px;
+    /*margin-left: 60px;*/
+    margin-bottom: 100px;
+    z-index: 100;
+    color: white;
+    font-size: 100px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content a{
+    width: 70% ;
+    padding: 0;
+}
+
+.connection{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.card{
+    /*z-index: 100;*/
+    cursor: pointer;
+    font-family: Nunito, sans-serif;
+    background: rgba(40, 40, 40, 1);
+    /*width: 50% ;*/
+    height: 400px;
+    padding: 50px;
+    box-shadow: 0 5px 30px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px/20px;
+    color: white;
+    display: flex;
+    gap: 50px;
+    /*justify-content: space-between;*/
+    flex-direction: row;
+    font-size: 20px;
+    text-transform: none;
+    border: 1px solid rgba(1, 1, 1, 0);
+    transition: all 0.5s ease;
+}
+.card:hover{
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+img{
+    height: auto;
+    object-fit: contain;
+    width: 40%;
+    border-radius: 10px/10px;
+}
+header{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(40, 40, 40, 1);
+    box-shadow: 0 5px 30px 15px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+    /*padding: 10px 10px 10px 10px;*/
+    /*align-items: center;*/
+}
+.chip{
+    text-transform: uppercase;
+    color: white;
+    font-size: 27px;
+    padding: 0;
+    font-family: Nunito, sans-serif;
+}
+
+a{
+    font-family: Nunito, sans-serif;
+    text-transform: uppercase;
+    padding: 30px 30px 30px 0;
+    text-decoration: none;
+    font-size: 25px;
+
+    color: white;
+    transition: all 0.3s ease;
+}
+a:hover{
+    color: limegreen;
+    transition: all 0.3s ease;
+}
+
+.logo{
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+    cursor: pointer;
+    fill: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.logo:hover{
+    fill: limegreen;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-3000px); /* The image width */
+    }
+}
+
+@keyframes jump {
+    0% {transform: translateY(-150%);}
+    15% {transform: translateY(5%);}
+    30% {transform: translateY(-5%);}
+    45% {transform: translateY(3%);}
+    60% {transform: translateY(-3%);}
+    75% {transform: translateY(1%);}
+    85% {transform: translateY(-1%);}
+    100% {transform: translateY(0);}
+}
+
+.background{
+    background: url(board.jpg) repeat-x;
+    /*background: black;*/
+    width: 6000px;
+    animation: slide 40s linear infinite;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position: fixed;
+    z-index:-1;
+}
+
+.blur{
+    background: rgba(0, 0, 0, 0.8); /* Make sure this color has an opacity of less than 1 */
+    backdrop-filter: blur(5px); /* This be the blur */
+    border-right: 1px solid whitesmoke;
+    height: 100vh;
+    /*position: relative;;*/
+}
+h1{
+    margin-top: 30px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+
+}
+.error{
+    /*margin-top:-100px;*/
+    /*margin-left:-200px; !* половина размера формы*!*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; /* Половина высоты формы */
+    margin-left: -250px; /* Половина ширины формы */
+    /*height: 200px;*/
+    height: auto;
+    /*width: 400px;*/
+    width: 500px;
+    padding: 40px;
+}
+form{
+    font-family: Nunito, sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /*z-index: 10; не знаю для чего это*/
+    margin-left:-300px; /* половина размера формы*/
+    margin-top:-325px;
+    background: rgba(40, 40, 40, 1);
+    width: 600px;
+    height: 650px;
+    padding: 20px;
+    box-shadow: 0 5px 30px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px/20px;
+    color: white;
+}
+
+.shopChoice{
+    /*font-family: Nunito, sans-serif;*/
+    /*!*animation: jump 1s ease-in-out forwards;*!*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*!*z-index: 10; не знаю для чего это*!*/
+    margin-left:-350px; /* половина размера формы*/
+    margin-top:-350px;
+    /*background: rgba(40, 40, 40, 1);*/
+    width: 700px;
+    height: 700px;
+    padding: 20px;
+    /*box-shadow: 0 5px 30px 15px rgba(0, 0, 0, 0.5);*/
+    /*border-radius: 20px/20px;*/
+    /*color: white;*/
+}
+.shopChoice ul{
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+ul {
+    list-style: none;
+}
+select{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: rgb(50, 50, 50);
+    height: 50px;
+    padding: 10px 10px;
+    border-radius: 10px/10px;
+    border: 1px solid rgba(1, 1, 1, 0);
+    outline:none;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    transition: all 0.5s ease;
+}
+
+select:focus{
+    color: white;
+}
+.specialization{
+    display: none;
+}
+.shopChoice ul li:hover .specialization{
+    display: block;
+}
+input[type="range"]{
+    width: 300px;
+    height: 1px;
+    margin: 50px 0;
+    vertical-align: middle;
+    accent-color: limegreen;
+    appearance: none;
+    padding: 0;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+input[type='radio']{
+    height: 20px;
+    width: 20px;
+    margin: 50px 0 50px 20px;
+    vertical-align: middle;
+
+}
+input[type='radio']:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(50, 50, 50);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid rgb(50, 50, 50);
+    transition: all 0.3s ease;
+}
+
+input[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: limegreen;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid rgb(50, 50, 50);
+    transition: all 0.3s ease;
+}
+/*label[for="isSameCityYes"], label[for="isSameCityYes"]{*/
+/*font-size: 20px;*/
+/*}*/
+
+
+label[id="discountValue"], label[id="reviewValue"], label[id="errorText"], label[for="isSameCityYes"], label[for="isSameCityYes"], label[for="isSameCityNo"]{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+label[id="errorText"]{
+    font-size: 30px;
+}
+
+.group{
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+/*label{*/
+/*    padding-right: 10px;*/
+/*    text-transform: uppercase;*/
+
+/*}*/
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+    border: 1px solid white;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px rgb(50, 50, 50) inset;
+    transition: all 0.5s ease;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover{
+    border: 1px solid limegreen;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px rgb(50, 50, 50) inset;
+    transition: all 0.5s ease;
+}
+input{
+    text-align: center;
+    /*margin-top: 10px;*/
+    padding: 10px 10px;
+    height: 40px;
+    width: 100%;
+
+    color: white;
+    /*background: limegreen;*/
+    background: rgb(50, 50, 50);
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    border-radius: 10px/10px;
+    border: 1px solid limegreen;
+    outline:none;
+
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+input:focus, select:focus{
+    border: 1px solid white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+input:placeholder-shown{
+    color: grey;
+    border: 1px solid rgba(1, 1, 1, 0);
+}
+input:placeholder-shown:focus{
+    border-color: white;
+}
+input:invalid{
+    border: 1px solid red;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+input:focus:invalid{
+    border: 1px solid rgba(255, 255, 255, 1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+button{
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 10px 30px;
+    height: 50px;
+    background: rgba(0, 0 , 0, 0);
+    color: limegreen;
+    border: 1px solid limegreen;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 10px/10px;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background: limegreen;
+    color: black;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.spinner-grow,
+.spinner-border {
+    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity));
+}
+#spinner-container {
+    position: relative;
+}
+
+#spinner {
+    position: absolute;
+    right: 140px;
+    margin-top: -31px;
+}
+#spinner-container1 {
+    position: relative;
+}
+
+#spinner1 {
+    position: absolute;
+    right: 195px;
+    margin-top: -31px;
+}
+
+
+
+
+
